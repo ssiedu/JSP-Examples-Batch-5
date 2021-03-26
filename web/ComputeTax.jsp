@@ -17,11 +17,11 @@
         <table border="1">
             <tr>
                 <td>Income</td>
-                <td><% out.println(income);%></td>
+                <td><%=income%></td>
             </tr>
             <tr>
                 <td>Tax</td>
-                <td><% out.println(tax); %></td>
+                <td><%=tax%></td>
             </tr>
         </table>
         <hr>
