@@ -1,17 +1,27 @@
-<%
-    //reading the request
-    String s=request.getParameter("t1");
-    //processing the request
-    int income=Integer.parseInt(s);
-    int tax=0;
-    if(income>=500000){
-        tax=income*25/100;
-    }else{
-        tax=income*15/100;
+<%!
+    int highRate=20;
+    int lowRate=10;
+    int computeTax(int income) {
+        if (income >= 500000) {
+            return income * 20 / 100;
+        } else {
+            return income * 10 / 100;
+        }
     }
+%>    
+
+<%
+    int x=5;
+    //reading the request
+    String msg = "income tax dept";
+    String s = request.getParameter("t1");
+    //processing the request
+    int income = Integer.parseInt(s);
+    int tax = computeTax(income);
 %>
 <html>
     <body>
+        <h3><%=msg.toUpperCase()%></h3>
         <h3>Tax-Calculations</h3>
         <hr>
         <table border="1">

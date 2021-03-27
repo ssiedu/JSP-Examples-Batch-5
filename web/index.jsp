@@ -1,3 +1,6 @@
+<jsp:scriptlet>
+    String s="hello";
+</jsp:scriptlet>
 <html>
     <body>
         <h3>JSP-Examples</h3>
