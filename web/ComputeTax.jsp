@@ -1,3 +1,5 @@
+<%@taglib uri="/WEB-INF/tlds/lib1.tld" prefix="mytags" %>
+
 <%!
     int highRate=20;
     int lowRate=10;
@@ -18,11 +20,13 @@
     //processing the request
     int income = Integer.parseInt(s);
     int tax = computeTax(income);
+  
 %>
 <html>
     <body>
         <h3><%=msg.toUpperCase()%></h3>
         <h3>Tax-Calculations</h3>
+        <mytags:today/>
         <hr>
         <table border="1">
             <tr>
